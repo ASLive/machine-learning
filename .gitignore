@@ -1,0 +1,8 @@
+*.pyc
+venv/*
+.idea/*
+pickle/*
+hand3d/weights/*
+hand3d/results/*
+hand3d/data/bin/*
+aws_creds.txt
