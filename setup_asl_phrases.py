@@ -177,4 +177,4 @@ def collect_pickle_data():
 
 write_frames(read_frames())
 frames_to_hands()
-collect_pickle_data
+collect_pickle_data()
