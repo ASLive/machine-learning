@@ -13,8 +13,8 @@ A temporary repo for data processing and tensorflow model training. The importan
 * Might need install python3-tk: `sudo apt-get install python3-tk`
 
 ## Setup
- 
-* download and extract hand3d training data: 
+
+* download and extract hand3d training data:
    * https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html
    * exact link: https://lmb.informatik.uni-freiburg.de/data/RenderedHandpose/RHD_v1-1.zip
    * extract `RHD_published_v2/` to parent folder of repo
@@ -24,7 +24,7 @@ A temporary repo for data processing and tensorflow model training. The importan
    * https://drive.google.com/file/d/1_UR6pySf_IaMzhqCyC7OG8ubkAGI99OM/view?usp=sharing
    * extract `training_data/` to parent folder of repo
 * download and extract asl training data processed with hand3d
-   * alternatively run `setup_asl.py` which could take a long while
+   * alternatively run `setup_asl_letters.py` which could take a long while
    * https://drive.google.com/file/d/1box3Pp8PPLZ0WeUOy0igsFSXSpSHU7DD/view?usp=sharing
    * extract all files to `<this_repo>/pickle/*`
 * hand3d training data and asl training data locations can be changed in `settings.py`
