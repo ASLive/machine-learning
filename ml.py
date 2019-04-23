@@ -7,7 +7,7 @@ from os.path import isfile
 from settings import JSON_PATH, WEIGHTS_PATH
 
 def setup():
-    num_clusters = 24
+    num_clusters = 10
     return keras.Sequential([
         Flatten(input_shape=(21, 3)),
         Dense(42069, activation=tf.nn.relu),
