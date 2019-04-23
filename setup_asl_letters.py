@@ -1,4 +1,4 @@
-from settings import ASL_TRAIN_PATH
+from settings import ASL_TRAIN_LETTERS_PATH
 import tensorflow as tf
 import numpy as np
 import os
@@ -39,12 +39,12 @@ def process_data():
         os.mkdir('./pickle')
 
     count = 0 # each letter corresponds to an int
-    for label in list(os.walk(ASL_TRAIN_PATH)): # walk directory
+    for label in list(os.walk(ASL_TRAIN_LETTERS_PATH)): # walk directory
         full_path, image_list = label[0], label[2]
-        letter = full_path[len(ASL_TRAIN_PATH)+1:] # get letter class
+        letter = full_path[len(ASL_TRAIN_LETTERS_PATH)+1:] # get letter class
         if len(letter) > 0:
             # get list of file paths to each image
-            image_path_list = [ASL_TRAIN_PATH+"/"+letter+"/"+file for file in image_list]
+            image_path_list = [ASL_TRAIN_LETTERS_PATH+"/"+letter+"/"+file for file in image_list]
             if len(image_path_list) > 0:
                 classes.append(letter)
                 print(letter, count)
