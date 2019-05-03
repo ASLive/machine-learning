@@ -151,14 +151,14 @@ def collect_pickle_data():
 	phrase_names = []
 	phrase_labels = []
 	phrases = []
-	phrase_counter = 0
+	phrase_counter = -1
 	for phrase_name in os.listdir(ASL_FRAME_PATH): # for each phrase
 		phrase_dir = ""
 		phrase_dir = ASL_FRAME_PATH+"\\"+phrase_name
 		pickle_dir = phrase_dir+"\\pickle"
 		phrase_names.append(phrase_name)
 		phrase_labels.append(phrase_counter)
-		phrases[phrase_counter] = []
+		phrases.append([])
 		phrase_counter += 1
 		for phrase_file in os.listdir(phrase_dir): # for each mp4 file of the phrase
 			phrase_file_dir = phrase_dir+"\\"+phrase_file
@@ -168,13 +168,13 @@ def collect_pickle_data():
 			phrases[phrase_counter].append(hand_data)
 
     # write data to binary files
-    with open("./pickle/phrases.pickle","wb") as f:
-        pickle.dump(phrases,f)
-    with open("./pickle/phrase_labels.pickle","wb") as f:
-        pickle.dump(phrase_labels,f)
-    with open("./pickle/phrase_names.pickle","wb") as f:
-        pickle.dump(phrase_names,f)
+	with open(r"C:\Users\louis\OneDrive\Documents\machine-learning\pickle\phrases.pickle","wb") as f:
+		pickle.dump(phrases,f)
+	with open(r"C:\Users\louis\OneDrive\Documents\machine-learning\pickle\phrase_labels.pickle","wb") as f:
+		pickle.dump(phrase_labels,f)
+	with open(r"C:\Users\louis\OneDrive\Documents\machine-learning\pickle\phrase_names.pickle","wb") as f:
+		pickle.dump(phrase_names,f)
 
-write_frames(read_frames())
-frames_to_hands()
+#write_frames(read_frames())
+#frames_to_hands()
 collect_pickle_data()
